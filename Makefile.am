@@ -14,6 +14,14 @@
 
 bin_PROGRAMS = true
 
-doc_DATA = LICENSE-2.0
+doc_DATA = README LICENSE-2.0 true.1.html
 
 true_SOURCES = true.c
+
+dist_man1_MANS = true.1
+
+true.1: true.1.xml
+	$(XML2MAN) $<
+
+true.1.html: true.1.xml
+	$(XML2HTML) $< > $@

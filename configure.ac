@@ -21,6 +21,8 @@ AC_CONFIG_HEADER([config.h])
 
 AC_PROG_CC
 
+UX_BUILD_DOCS
+
 AC_CHECK_HEADERS([unistd.h])
 
 AC_CONFIG_FILES([Makefile])
