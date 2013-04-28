@@ -13,15 +13,16 @@
 ##  limitations under the License.
 
 AC_INIT([true],[master])
-
+AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([foreign])
 AM_MAINTAINER_MODE
 
 AC_CONFIG_HEADER([config.h])
 
+BT_PROG_XCODE
 AC_PROG_CC
 
-UX_BUILD_DOCS
+BT_BUILD_DOCS
 
 AC_CHECK_HEADERS([unistd.h])
 
